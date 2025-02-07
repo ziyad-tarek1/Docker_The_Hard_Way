@@ -54,7 +54,8 @@ To get a local copy up and running, follow these steps:
    ```
 
 3. Open your web browser and navigate to `http://localhost:8080` to view the analog clock.
-![image](https://github.com/user-attachments/assets/f67320a7-38ca-4148-abb8-1203daac0698)
+
+![image](https://github.com/user-attachments/assets/6266edfa-f176-4eaf-bfa7-3536c913ab12)
 
 
 ### Without Docker
