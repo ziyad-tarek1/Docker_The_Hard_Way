@@ -2,6 +2,8 @@
 
 A simple Flask-based web application to download YouTube videos or audio. This project uses `yt-dlp` to handle YouTube downloads and provides a user-friendly web interface.
 
+![image](https://github.com/user-attachments/assets/6f5a3e97-4a71-418b-a5e4-ef85f884bb6c)
+
 ---
 
 ## Features
