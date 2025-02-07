@@ -12,4 +12,4 @@
 
 - **Open your web browser and navigate to `http://localhost:8080` to view the analog clock.**
 
-image.png
+![image](https://github.com/user-attachments/assets/67f5fb23-66b6-4b18-bdf7-1be525595d05)
