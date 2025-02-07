@@ -5,9 +5,9 @@
   - `docker-compose.yml`
   - `vote/`, `result/`, `worker/`
 - **How to Run**:
-  ```bash
+```bash
 docker-compose up --build
-  ```
+```
 
 - **Open your web browser and navigate to http://localhost:5000 to view the vote page .**:
 
