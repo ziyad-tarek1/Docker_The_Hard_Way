@@ -9,6 +9,8 @@ This is a simple Todo application built using **Python Flask** and **MySQL**. Th
 
 The application is containerized using **Docker** and **Docker Compose**, making it easy to set up and run.
 
+![image](https://github.com/user-attachments/assets/d73f706c-a56c-46ed-a1c5-8e347ae8de15)
+
 ---
 
 ## Table of Contents
