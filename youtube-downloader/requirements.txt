@@ -1,0 +1,4 @@
+
+Flask==2.3.2
+yt-dlp
+Werkzeug==2.3.7

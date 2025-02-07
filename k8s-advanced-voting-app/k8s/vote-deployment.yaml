@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vote
+  template:
+    metadata:
+      labels:
+        app: vote
+    spec:
+      containers:
+        - name: vote
+          image: <your-docker-registry>/vote:latest
+          command: ["python"]  # Optional: Only if overriding Dockerfile ENTRYPOINT
+          args: ["app.py"]     # Optional: Only if overriding Dockerfile CMD
+          ports:
+            - containerPort: 80
+          env:
+            - name: REDIS_HOST
+              value: "redis"
+            - name: POSTGRES_HOST
+              value: "db"
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vote
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30000  # Expose on port 30000
+  selector:
+    app: vote

@@ -1,0 +1,70 @@
+/* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f0f0f0;
+    margin: 0;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 20px solid black;
+    border-radius: 50%;
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* Fix for the hands positioning */
+}
+
+.hand {
+    width: 50%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+    height: 6px;
+}
+
+.minute-hand {
+    height: 4px;
+}
+
+.second-hand {
+    height: 2px;
+    background: red;
+}
+
+.number {
+    position: absolute;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+}
+
+.number1  { top: 20%; left: 85%; }
+.number2  { top: 35%; left: 92%; }
+.number3  { top: 50%; left: 97%; }
+.number4  { top: 65%; left: 92%; }
+.number5  { top: 80%; left: 85%; }
+.number6  { top: 85%; left: 50%; }
+.number7  { top: 80%; left: 15%; }
+.number8  { top: 65%; left: 8%; }
+.number9  { top: 50%; left: 3%; }
+.number10 { top: 35%; left: 8%; }
+.number11 { top: 20%; left: 15%; }
+.number12 { top: 15%; left: 50%; }

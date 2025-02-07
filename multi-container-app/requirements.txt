@@ -1,0 +1,4 @@
+Flask==2.0.1
+psycopg2-binary==2.9.1  # For PostgreSQL
+mysql-connector-python==8.0.26  # For MySQL
+Werkzeug==2.0.1  # Specify a compatible version

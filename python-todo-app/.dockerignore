@@ -1,0 +1,4 @@
+*.sql
+venv
+Dockerfile
+README.md

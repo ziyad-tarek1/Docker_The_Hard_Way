@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      DB_TYPE: ${DB_TYPE}  # Set this in your .env file or directly in the terminal
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: ./custom_postgres  # Change this to ./custom_mysql for MySQL
+    ports:
+      - "5432:5432"  # Change this to "3306:
+      # - "3306:3306"  # Uncomment this line if using MySQL
