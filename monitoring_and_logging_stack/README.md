@@ -3,6 +3,19 @@
 ## Project Overview
 This project demonstrates how to set up monitoring and logging for Docker containers using Prometheus, Grafana, and the ELK stack (Elasticsearch, Logstash, Kibana).
 
+- Flask App
+![image](https://github.com/user-attachments/assets/6a5301e3-3b7f-4522-87d3-0bbfa8814686)
+
+- Prometheus
+![image](https://github.com/user-attachments/assets/1be65682-1bff-449e-a591-a4d979f70230)
+
+- Grafana
+![image](https://github.com/user-attachments/assets/534793df-468c-4fd9-95dc-0df2ee997e33)
+
+- Kibana (ELK)
+![image](https://github.com/user-attachments/assets/65450e50-1309-403c-b664-b12a1a46e7f4)
+
+
 ## Tech Stack
 - **Prometheus** (Monitoring)
 - **Grafana** (Visualization)
