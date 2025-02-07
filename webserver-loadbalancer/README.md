@@ -37,12 +37,12 @@ To get started with the Webserver Project, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/ziyad-tarek1/webserver-project.git
+   git clone https://github.com/ziyad-tarek1/Docker_The_Hard_Way.git
    ```
 
 2. **Navigate to the Project Directory**:
    ```bash
-   cd webserver-project
+   cd webserver-loadbalancer
    ```
 
 3. **Run Docker Compose**:
