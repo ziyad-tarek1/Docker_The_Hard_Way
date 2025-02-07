@@ -84,6 +84,10 @@ A `docker-compose.yml` file is provided to simplify deployment.
 ```sh
 docker-compose up -d
 ```
+### The output should look like that:
+
+![image](https://github.com/user-attachments/assets/a0b62c46-cbea-40c4-b915-25e641759edb)
+
 
 ### Stop Services
 ```sh
