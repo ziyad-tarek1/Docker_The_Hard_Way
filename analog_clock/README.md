@@ -1,6 +1,4 @@
-Certainly! Below is a sample `README.md` file for your analog clock project. You can customize it further based on your specific needs or preferences.
 
-```markdown
 # Analog Clock
 
 This project is a simple analog clock application built using HTML, CSS, and JavaScript. It is designed to be served using Nginx in a Docker container.
