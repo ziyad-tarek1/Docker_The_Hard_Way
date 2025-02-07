@@ -1,7 +1,3 @@
-Based on the additional information you've provided about the `container` directory, I've updated the README to include more specific details about the container-only solution, including the structure of the `container` directory and how to use the `docker-compose.yml` file. Here’s the revised README for the **k8s-advanced-voting-app** project:
-
----
-
 # K8s Advanced Voting App
 
 ## Description
@@ -57,7 +53,15 @@ This solution allows you to run the voting application using Docker containers w
    ```
 
 3. **Access the Application**:
-   Once the containers are running, you can access the application through the specified ports defined in the `docker-compose.yml` file.
+- **Open your web browser and navigate to http://localhost:5000 to view the vote page .**:
+
+![image](https://github.com/user-attachments/assets/b870983c-bc7b-4f3f-af90-2f050a08ab9a)
+
+
+
+- **Open your web browser and navigate to http://localhost:5001 to view the result page .**:
+
+![image](https://github.com/user-attachments/assets/a161f4a8-446c-4b7e-9140-2d79905f560e)
 
 ### 2. Kubernetes Solution
 
