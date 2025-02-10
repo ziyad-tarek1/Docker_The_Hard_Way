@@ -133,3 +133,8 @@ docker rmi custom_mysql custom_postgres flask_app
 - Database connection defaults to the `db` hostname as defined in `docker-compose.yml`.
 
 
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
+
