@@ -1,0 +1,10 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.navbar {
+    padding: 10px;
+}
+canvas {
+    max-width: 200px;
+    margin: auto;
+}
