@@ -22,6 +22,7 @@ This repository contains a collection of Docker and Kubernetes projects, ranging
    - [Voting App](#voting-app)
    - [Kubernetes Voting App](#kubernetes-voting-app)
    - [Kubernetes Advanced Voting App](#kubernetes-advanced-voting-app)
+   - [challeng python monitoring app](#challeng_python_monitoring_app)
 4. [Contributing](#contributing)
 5. [License](#license)
 
@@ -213,6 +214,8 @@ To get started with any of the projects:
   ```bash
   kubectl apply -f <manifest-file>
   ```
+### challeng_python_monitoring_app
+- **Description**: An advanced docker project try containerized it yourself.
 
 
 ---
