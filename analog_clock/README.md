@@ -94,4 +94,8 @@ The Docker container includes a health check that verifies if the Nginx server i
 
 - Inspired by various online resources and tutorials on building analog clocks.
 - Thanks to the open-source community for the tools and libraries used in this project.
-```
+
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
