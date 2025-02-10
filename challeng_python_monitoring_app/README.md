@@ -1,5 +1,5 @@
 
-# Challenge try do it yourseldf! 🚀🔥
+# Challenge try do it yourself! 🚀🔥
 ## Python Monitoring App (Dockerized)
 
 This is a **Linux Host Monitoring** application that provides **real-time monitoring** of CPU, Memory, and Disk Usage.
