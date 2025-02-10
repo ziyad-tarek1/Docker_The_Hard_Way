@@ -181,6 +181,10 @@ python-todo-app/
 - [Docker](https://www.docker.com/) for containerization.
 
 ---
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
 
-Enjoy using the Todo App! If you have any questions or issues, feel free to open an issue or submit a pull request.
+Happy coding! 🚀
+
+#### Enjoy using the Todo App! If you have any questions or issues, feel free to open an issue or submit a pull request.
 
