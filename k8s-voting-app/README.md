@@ -75,3 +75,9 @@ kubectl port-forward service/voting-app-service 8080:80
 ## Conclusion
 
 This project provides a simple yet effective way to deploy a voting application using Kubernetes. By following the instructions above, you can set up the application and access it through the defined services.
+
+
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
