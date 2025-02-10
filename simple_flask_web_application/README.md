@@ -8,3 +8,7 @@
   ```bash
   docker-compose up
   ```
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
