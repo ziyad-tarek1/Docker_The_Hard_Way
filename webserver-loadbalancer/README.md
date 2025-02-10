@@ -61,3 +61,9 @@ Once the services are up and running, you can access them via the following URLs
 ## Conclusion
 
 This project serves as a foundational example of using Docker and Docker Compose to manage multiple web services. You can expand upon this setup by adding more services, customizing the content, or integrating additional features as needed.
+
+
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
