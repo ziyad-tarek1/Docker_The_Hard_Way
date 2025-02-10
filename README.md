@@ -2,6 +2,9 @@
 
 This repository contains a collection of Docker and Kubernetes projects, ranging from simple containerized applications to advanced multi-container setups and Kubernetes deployments. Each project is designed to help you understand and practice different aspects of containerization, orchestration, and DevOps workflows.
 
+
+![blendBoard](https://github.com/user-attachments/assets/e57af318-b130-412f-9ec5-5b8025be1628)
+
 ---
 
 ## Table of Contents
