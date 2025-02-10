@@ -269,5 +269,8 @@ docker-compose up --build
 - **Centralized logging** using the ELK stack (Elasticsearch, Logstash, Kibana).
 - **Hands-on experience** with observability tools in Docker environments.
 
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
 🚀 Happy Monitoring & Logging! 🚀
 
