@@ -89,3 +89,8 @@ This solution deploys the voting application using Kubernetes, allowing for bett
 
 This project provides two solutions for deploying the advanced voting application: a container-only solution for local development and a Kubernetes solution for cloud-native deployment. Choose the solution that best fits your needs and follow the respective instructions to get started.
 
+
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
