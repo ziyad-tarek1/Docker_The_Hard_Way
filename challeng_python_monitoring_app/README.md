@@ -72,6 +72,9 @@ docker stop $(docker ps -q --filter "ancestor=python-monitoring-app")
 | **Metrics API** | ![API Output](static/api-screenshot.png) |
 | **Web UI** | ![Dashboard](static/ui-screenshot.png) |
 
+
+![image](https://github.com/user-attachments/assets/6b65d4b2-75ec-4dc4-ad99-e7e4f9050bdd)
+
 ---
 
 ## 📌 Notes
