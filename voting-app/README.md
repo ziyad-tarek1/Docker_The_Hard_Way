@@ -18,3 +18,9 @@ docker-compose up --build
 - **Open your web browser and navigate to http://localhost:5001 to view the result page .**:
 
 ![image](https://github.com/user-attachments/assets/a161f4a8-446c-4b7e-9140-2d79905f560e)
+
+
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
