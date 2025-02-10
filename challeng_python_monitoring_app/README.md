@@ -119,3 +119,7 @@ docker stop $(docker ps -q --filter "ancestor=python-monitoring-app")
 ✅ **Web UI Dashboard for Real-time Charts**  
 ✅ **Dockerized for Easy Deployment**  
 
+### 💡 Contributors
+    - Ziyad Tarek Saeed - Author and Maintainer.
+
+Happy coding! 🚀
