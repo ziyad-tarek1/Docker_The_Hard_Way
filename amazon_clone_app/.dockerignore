@@ -1,0 +1,53 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Build output
+build
+dist
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+*.log
+
+# Temporary files
+tmp
+temp
+*.tmp
+
+# IDE and editor files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Public data files (if not needed in the image)
+public/data/*.json
+
+# Test files
+coverage
+*.spec.js
+*.test.js
+
+# Other files to ignore
+README.md
+
+
+*.tf
+install_jenkins.sh
+JENKINS-TF
