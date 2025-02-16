@@ -51,3 +51,4 @@ README.md
 *.tf
 install_jenkins.sh
 JENKINS-TF
+non_optimized_Dockerfile
