@@ -1,0 +1,33 @@
+#### **1️⃣ Pull `nginx:alpine` Image with `nerdctl`**  
+```bash
+nerdctl pull nginx:alpine
+```
+
+
+
+
+#### **2️⃣ Run `nginx:alpine` Container in Background with `nerdctl`**  
+```bash
+nerdctl run -d --name ziyad-tarek-ITI-45 nginx:alpine
+```
+---
+
+#### **3️⃣ Run Apache Container with Resource Limits using `nerdctl`**  
+```bash
+nerdctl run -d --name limited-container --memory=70m --cpus=1 httpd:alpine
+```
+
+---
+
+#### **4️⃣ Get the Path of cgroups for Apache Container with `nerdctl`**  
+```bash
+nerdctl ps | grep httpd
+```
+```bash
+sudo ls -al /sys/fs/cgroup/system.slice/container-$(nerdctl inspect --format="{{.Id}}" limited-container).scope/
+```
+
+#### **5️⃣ Get `memory.max` of Apache Container using `nerdctl`**  
+```bash
+sudo cat /sys/fs/cgroup/system.slice/container-$(nerdctl inspect --format="{{.Id}}" limited-container).scope/memory.max
+```
