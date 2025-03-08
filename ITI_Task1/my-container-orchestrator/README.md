@@ -19,14 +19,13 @@ This project is a simple Go utility that uses containerd's API to pull a Docker 
 
 1. **Clone the Repository:**
    ```sh
-   git clone <repository-url>
-   cd my-container-orchestrator
+   git clone https://github.com/ziyad-tarek1/Docker_The_Hard_Way.git
+   cd Docker_The_Hard_Way/ITI_Task1/my-container-orchestrator/
    ```
 
 2. **Initialize the Go Module (if not already done):**
    ```sh
    go mod init my-container-orchestrator
-   go mod tidy
    ```
 
 ## Usage
