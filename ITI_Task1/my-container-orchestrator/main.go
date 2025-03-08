@@ -43,7 +43,7 @@ func runContainer(imageName, containerName string) error {
 		ctx,
 		containerName,
 		containerd.WithNewSnapshot(containerName+"-snapshot", image),
-		containerd.WithNewSpec(oci.WithImageConfig(image)),
+		containerd.WithNewSpec(oci.WithImageConfig(image), oci.WithHostNamespace("network")),
 	)
 	if err != nil {
 		return fmt.Errorf("failed to create container: %w", err)
