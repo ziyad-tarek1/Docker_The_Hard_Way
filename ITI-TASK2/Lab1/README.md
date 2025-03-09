@@ -113,11 +113,4 @@ EXPOSE 5000
 CMD ["python", "routes.py"]  # Change to app.py if necessary
 ```
 
----
 
-## **License**
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
-
----
-
-### 🚀 **Now you're ready to containerize and deploy your Flask app using Docker!** 🚀
