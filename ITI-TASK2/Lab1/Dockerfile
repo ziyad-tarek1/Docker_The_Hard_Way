@@ -9,10 +9,11 @@ WORKDIR /app
 
 # Copy the requirements file and install dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip \
+    pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your application code
-COPY routes.py .
+COPY . .
 
 # Expose the port the app runs on
 EXPOSE 5000
