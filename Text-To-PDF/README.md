@@ -61,22 +61,31 @@ docker ps
    ```
    Output should include `Linger=yes`.
 
-5. Enable and start the service:
+5. Verify the service statue:
    ```bash
-   systemctl --user enable container-myapp.service
-   systemctl --user start container-myapp.service
+   systemctl --user status container-myapp.service
    ```
-
-## Reboot and Check Container Status
+6. If the service is created correctly stop and remove the container :
+   ```bash
+   podman stop myapp
+   podman rm myapp
+   ```
+     
+7. Enable and start the service:
+   ```bash
+   systemctl --user enable --now container-myapp.service
+   systemctl --user status container-myapp.service
+   ```
+## Reboot and Check service Status
 
 1. Reboot your system:
    ```bash
    sudo reboot
    ```
 
-2. After reboot, verify the container is running:
+2. After reboot, verify the service is running:
    ```bash
-   docker ps
+   systemctl --user status container-myapp.service
    ```
 
 ## Test the Application
