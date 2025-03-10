@@ -3,7 +3,7 @@
 ## Build Application Image from Dockerfile
 
 ```bash
-docker image build -t myapp .
+docker image build -t myapp -f Containerfile
 ```
 
 ## List Created Image
