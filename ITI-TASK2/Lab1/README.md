@@ -13,6 +13,8 @@ This repository contains a simple Flask application that runs inside a Docker co
 
 ---
 
+![image](https://github.com/user-attachments/assets/42df3cb5-ed39-4490-ad2f-96fc1f5e6c9d)
+
 ## **Requirements**
 Ensure you have the following installed before running the application:
 - **Docker** (latest version recommended)  
@@ -35,15 +37,16 @@ basic-flask-app/
 
 ## **Building and Running the Image**
 ### **1. Build the Docker Image**
-Run the following command to build the Docker image with the name `ITI-flask-lab2`:
+Run the following command to build the Docker image with the name `iti-flask-lab2`:
 ```sh
-docker build -t ITI-flask-lab2 .
+docker build -t iti-flask-lab2 .
 ```
+![image](https://github.com/user-attachments/assets/113b134d-b06e-48fa-841e-9f91afc05285)
 
 ### **2. Run the Container with Memory Limit (100MB)**
 Start the container and bind **port 5000 inside the container to port 80 on the host**:
 ```sh
-docker run -d --memory=100m -p 127.0.0.1:80:5000 --name flask-container ITI-flask-lab2
+docker run -d --memory=100m -p 80:5000 --name flask-container iti-flask-lab2
 ```
 
 ---
@@ -75,7 +78,7 @@ docker login -u ziyadtarek99
 
 ### **2. Tag the Image**
 ```sh
-docker tag ITI-flask-lab2 ziyadtarek99/iti-flask-lab2:latest
+docker tag iti-flask-lab2 ziyadtarek99/iti-flask-lab2:latest
 ```
 
 ### **3. Push the Image**
@@ -89,28 +92,31 @@ docker push ziyadtarek99/iti-flask-lab2:latest
 This Dockerfile builds a lightweight Flask application container.
 
 ```dockerfile
-# Use the official Python image from Docker Hub
 FROM python:3.9-slim AS base
 
-# Set environment variables to optimize Python behavior
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
-# Set the working directory inside the container
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy dependencies and install them
+# Copy the requirements file and install dependencies
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application source code
+# Copy the rest of your application code
 COPY . .
 
-# Expose the port Flask runs on
+# Expose the port the app runs on
 EXPOSE 5000
 
-# Run the application
-CMD ["python", "routes.py"]  # Change to app.py if necessary
+# Command to run the application
+CMD ["python", "routes.py"]
 ```
 
+---
 
+## **License**
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
