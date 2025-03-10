@@ -1,5 +1,11 @@
 # Text to PDF Converter Application
 
+## Download the Raw file to start build the image
+
+```bash
+wget https://raw.githubusercontent.com/ziyad-tarek1/Docker_The_Hard_Way/refs/heads/main/Text-To-PDF/Containerfile
+```
+
 ## Build Application Image from Dockerfile
 
 ```bash
