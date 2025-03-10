@@ -1,0 +1,66 @@
+FROM python:3.9-slim
+
+RUN pip install --no-cache-dir fpdf && \
+    mkdir -p /temp /opt/incoming /opt/outgoing
+
+WORKDIR /app
+
+# Create the application file line-by-line
+RUN echo "from fpdf import FPDF" > app.py && \
+    echo "import os" >> app.py && \
+    echo "import time" >> app.py && \
+    echo "import textwrap" >> app.py && \
+    echo "import filecmp" >> app.py && \
+    echo "" >> app.py && \
+    echo "INPUT_DIR = '/data/input'" >> app.py && \
+    echo "OUTPUT_DIR = '/data/output'" >> app.py && \
+    echo "TEMP_DIR = '/temp'" >> app.py && \
+    echo "" >> app.py && \
+    echo "def text_to_pdf(in_file, out_file):" >> app.py && \
+    echo "    a4_width_mm = 210" >> app.py && \
+    echo "    pt_to_mm = 0.35" >> app.py && \
+    echo "    fontsize_pt = 10" >> app.py && \
+    echo "    fontsize_mm = fontsize_pt * pt_to_mm" >> app.py && \
+    echo "    margin_bottom_mm = 10" >> app.py && \
+    echo "    character_width_mm = 7 * pt_to_mm" >> app.py && \
+    echo "    width_text = a4_width_mm / character_width_mm" >> app.py && \
+    echo "" >> app.py && \
+    echo "    pdf = FPDF(orientation='P', unit='mm', format='A4')" >> app.py && \
+    echo "    pdf.set_auto_page_break(True, margin=margin_bottom_mm)" >> app.py && \
+    echo "    pdf.add_page()" >> app.py && \
+    echo "    pdf.set_font(family='Courier', size=fontsize_pt)" >> app.py && \
+    echo "    with open(in_file) as file:" >> app.py && \
+    echo "        for line in file:" >> app.py && \
+    echo "            line = line[:-1]" >> app.py && \
+    echo "            lines = textwrap.wrap(line, width_text)" >> app.py && \
+    echo "            if len(lines) == 0:" >> app.py && \
+    echo "                pdf.ln()" >> app.py && \
+    echo "            for wrap in lines:" >> app.py && \
+    echo "                pdf.cell(0, fontsize_mm, wrap, ln=1)" >> app.py && \
+    echo "    pdf.output(out_file, 'F')" >> app.py && \
+    echo "" >> app.py && \
+    echo "while True:" >> app.py && \
+    echo "    try:" >> app.py && \
+    echo "        time.sleep(1)" >> app.py && \
+    echo "        input_files = os.listdir(INPUT_DIR)" >> app.py && \
+    echo "        output_files = [name.split('.')[0] for name in os.listdir(OUTPUT_DIR)]" >> app.py && \
+    echo "        for file in input_files:" >> app.py && \
+    echo "            if os.path.isfile(os.path.join(INPUT_DIR, file)):" >> app.py && \
+    echo "                in_file = file.split('.')[0]" >> app.py && \
+    echo "                in_path = os.path.join(INPUT_DIR, file)" >> app.py && \
+    echo "                out_path = os.path.join(OUTPUT_DIR, f'{in_file}.pdf')" >> app.py && \
+    echo "                if in_file not in output_files:" >> app.py && \
+    echo "                    os.system(f'cp -f {in_path} {TEMP_DIR}')" >> app.py && \
+    echo "                    text_to_pdf(in_path, out_path)" >> app.py && \
+    echo "                else:" >> app.py && \
+    echo "                    temp_path = os.path.join(TEMP_DIR, file)" >> app.py && \
+    echo "                    if not os.path.exists(temp_path):" >> app.py && \
+    echo "                        os.system(f'cp -f {in_path} {TEMP_DIR}')" >> app.py && \
+    echo "                    result = filecmp.cmp(in_path, temp_path)" >> app.py && \
+    echo "                    if result == False:" >> app.py && \
+    echo "                        os.system(f'cp -f {in_path} {TEMP_DIR}')" >> app.py && \
+    echo "                        text_to_pdf(in_path, out_path)" >> app.py && \
+    echo "    except Exception as error:" >> app.py && \
+    echo "        print(f'error: {error}')" >> app.py
+
+CMD ["python3", "app.py"]
