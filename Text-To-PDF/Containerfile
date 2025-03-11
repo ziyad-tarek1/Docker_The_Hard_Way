@@ -1,7 +1,7 @@
 FROM python:3.9-slim
 
 RUN pip install --no-cache-dir fpdf && \
-    mkdir -p /temp /opt/incoming /opt/outgoing
+    mkdir -p /temp /data/input /data/output
 
 WORKDIR /app
 
