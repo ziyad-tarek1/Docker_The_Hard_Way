@@ -73,8 +73,8 @@ docker ps
    ```
 6. If the service is created correctly stop and remove the container **Note: This step is very important**  :
    ```bash
-   podman stop myapp
-   podman rm myapp
+   docker stop myapp
+   docker rm myapp
    ```
      
 7. Enable and start the service:
