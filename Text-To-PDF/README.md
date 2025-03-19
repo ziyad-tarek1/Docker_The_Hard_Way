@@ -71,7 +71,7 @@ docker ps
    ```bash
    systemctl --user status container-myapp.service
    ```
-6. If the service is created correctly stop and remove the container :
+6. If the service is created correctly stop and remove the container **Note: This step is very important**  :
    ```bash
    podman stop myapp
    podman rm myapp
