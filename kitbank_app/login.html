@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to SkyeBank</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="validation.js" defer></script>
+  <style>
+    /* styles.css */
+:root {
+  --primary-color: #8672FF;
+  --background-color: #F3F0FF;
+  --text-color: #2E2B41;
+  --error-color: #f06272;
+  --border-radius: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: url('./background.jpg') no-repeat center center/cover;
+}
+
+.wrapper {
+  background-color: #fff;
+  width: clamp(320px, 40%, 600px);
+  padding: 2rem;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+#error-message {
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.icon-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 1em;
+  font-size: 1rem;
+  border: 2px solid var(--background-color);
+  border-left: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  background-color: var(--background-color);
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.login-button {
+  padding: 0.75em 3em;
+  border: none;
+  border-radius: 1000px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover,
+.login-button:focus {
+  background-color: #6f5be7;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <main class="wrapper">
+    <h1>Login</h1>
+    <p id="error-message" aria-live="polite"></p>
+    <form id="form" aria-label="Login form">
+      <div class="input-group">
+        <label for="email-input" class="icon-label">@</label>
+        <input type="email" name="email" id="email-input" placeholder="Email" required>
+      </div>
+      <div class="input-group">
+        <label for="password-input" class="icon-label">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" aria-hidden="true">
+            <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z"/>
+          </svg>
+        </label>
+        <input type="password" name="password" id="password-input" placeholder="Password" required>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    <p>New here? <a href="signup.html">Create an Account</a></p>
+  </main>
+</body>
+</html>

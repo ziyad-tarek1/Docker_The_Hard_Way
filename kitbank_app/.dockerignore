@@ -1,0 +1,24 @@
+# Ignore version control files
+.git
+.gitignore
+
+# Ignore Docker build files 
+Dockerfile
+.dockerignore
+
+# Ignore documentation or readme files 
+README.md
+
+# Ignore local development directories
+.idea/
+.vscode/
+
+# Ignore OS-specific files
+.DS_Store
+
+# Ignore logs or temporary files
+*.log
+
+# Ignore development-only assets
+scss/
+**/backup.txt
